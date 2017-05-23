@@ -1,0 +1,267 @@
+<!-- You should read this mode better than the design view -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Tutorial Lession 2 :: KUROSU'S</title>
+    <link rel="stylesheet" type="text/css" href="../css/tails-main.css" />
+  </head>
+
+  <body>
+    <header class="header-fixed">
+      <div class="box">
+        KUROSU'S - Web Tutorial
+      </div>
+    </header>
+
+    <div id="wrapper">
+      <div class="box-full">
+        <div class="box">
+          <h1>Lesson 2 :: Layout</h1>
+          <p>簡單來說就是幫網頁穿衣服，幫一個網站完成視覺上的美感。</p>
+          <p>我會將編成網頁風格的方式分為兩類：</p>
+          <ol>
+            <li>Hard Code - 直接寫入網頁內部的方式</li>
+            <li>Import CSS file - 導入CSS文件至每一頁的方式</li>
+          </ol>
+          <p>本篇主要講解如何寫出自己網站的Style。</p>
+          <p>You：*WTF*!? NMD 才開始第二堂便直接學編程?</p>
+          <p>Mentor Jesse: 香港人心急嘛...</p>
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <h2>Hard Code Style :: 直入式</h2>
+          <div class="code">
+            <ol>
+              <li><span class="tag">&lt;head&gt;</span></li>
+              <li>&nbsp;&nbsp;<span class="tag">&lt;style type="text/css"&gt;</span></li>
+              <li>&nbsp;&nbsp;<span class="class">.red-box</span> {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #f00;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;color: #fff;</li>
+              <li>&nbsp;&nbsp;}</li>
+              <li>&nbsp;&nbsp;<span class="id">#green-box</span> {</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #0f0;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;color: #fff;</li>
+              <li>&nbsp;&nbsp;}</li>
+              <li>&nbsp;&nbsp;<span class="tag">&lt;/style&gt;</span></li>
+              <li><span class="tag">&lt;/head&gt;</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div>
+          <h2>CSS - Cascading Style Sheets :: 導入式</h2>
+          <h3>HTML file</h3>
+          <p></p>
+          <div class="code">
+            <ol>
+              <li><span class="tag">&lt;head&gt;</span></li>
+              <li>&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="<span>{{style}}.css</span>" /&gt;</li>
+              <li><span class="tag">&lt;/head&gt;</span></li>
+            </ol>
+          </div>
+          <p>請養成隨手關門的好習慣。</p>
+
+          <h3>CSS file</h3>
+          <p></p>
+          <div class="code">
+            <ol>
+              <li><span class="class">.red-box</span> {</li>
+              <li>&nbsp;&nbsp;background-color: #f00;</li>
+              <li>&nbsp;&nbsp;color: #fff;</li>
+              <li>}</li>
+              <li><span class="id">#green-box</span> {</li>
+              <li>&nbsp;&nbsp;background-color: #0f0;</li>
+              <li>&nbsp;&nbsp;color: #fff;</li>
+              <li>}</li>
+            </ol>
+          </div>
+        </div>
+
+        <div>
+          <h2>How to use? :: 應用</h2>
+          <p>建立了一個簡單的CSS格式編碼後，我們應該要如何放進HTML裡頭使用呢？</p>
+          <p>閱讀以下範例：</p>
+          <div class="code">
+            <ol>
+              <li><span class="tag">&lt;div</span> class="<span class="class">red-box</span>"<span class="tag">&gt;</span></li>
+              <li>&nbsp;&nbsp;This is the red box effect with class(.)</li>
+              <li><span class="tag">&lt;/div&gt;</span></li>
+              <li><span class="tag">&lt;div</span> id="<span class="id">green-box</span>"<span class="tag">&gt;</span></li>
+              <li>&nbsp;&nbsp;This is the green box effect with ID(#)</li>
+              <li><span class="tag">&lt;/div&gt;</span></li>
+            </ol>
+          </div>
+          <p>按照以上的編碼，你試試會得到一個怎麼樣的結果。</p>
+
+        </div>
+      </div>
+      <div class="box-full">
+        <div class="box">
+          <h2>CSS的基本要學懂的十式</h2>
+          <div class="block">
+            <h3>FONT :: 字</h3>
+            <div class="code">
+              <ol>
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-weight</li>
+                <li>font-style</li>
+                <li>text-decoration</li>
+                <li>text-align</li>
+                <li>line-height</li>
+                <li>letter-spacing</li>
+                <li>color</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>IMAGE :: 圖</h3>
+            <div class="code">
+              <ol>
+                <li>width</li>
+                <li>height</li>
+                <li>max-weight</li>
+                <li>max-height</li>
+                <li>display</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>LINK :: 連結</h3>
+            <div class="code">
+              <ol>
+                <li>:hover</li>
+                <li>:focus</li>
+                <li>:active</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>BACKGROUND :: 背景</h3>
+            <div class="code">
+              <ol>
+                <li>background</li>
+                <li>background-color</li>
+                <li>background-image</li>
+                <li>background-repeat</li>
+                <li>background-position</li>
+                <li>background-size</li>
+                <li>background-attachment</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>FRAME :: 框</h3>
+            <div class="code">
+              <ol>
+                <li>border</li>
+                <li>border-color</li>
+                <li>border-width</li>
+                <li>border-radius</li>
+                <li>border-left</li>
+                <li>border-right</li>
+                <li>border-top</li>
+                <li>border-bottom</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>FLOAT :: 浮動</h3>
+            <div class="code">
+              <ol>
+                <li>float</li>
+                <li>position</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>ROW &amp; LIST :: 列與清單</h3>
+            <div class="code">
+              <ol>
+                <li>margin</li>
+                <li>padding</li>
+                <li>list-style</li>
+                <li>vertical-align</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>SPACING :: 空間</h3>
+            <div class="code">
+              <ol>
+                <li>margin</li>
+                <li>padding</li>
+                <li>position</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>BEFORE &amp; AFTER :: 之前與之後</h3>
+            <div class="code">
+              <ol>
+                <li>tag / class / id::before</li>
+                <li>tag / class / id::after</li>
+                <li>content</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block">
+            <h3>CHILDREN :: 子</h3>
+            <div class="code">
+              <ol>
+                <li>tag / class / id:first-child</li>
+                <li>tag / class / id:last-child</li>
+                <li>tag / class / id:nth-child(n)</li>
+                <li>tag / class / id:nth-child(odd)</li>
+                <li>tag / class / id:nth-child(even)</li>
+              </ol>
+            </div>
+          </div>
+
+          <h2>顏色的基本用法</h2>
+          <div class="block">
+            <h3>色值編碼方式</h3>
+            <div class="code">
+              <ol>
+                <li>color: #ffffff - 十六進制式，R(紅)/00-0F ~ F0-FF/ G(綠)/00-0F ~ F0-FF/ B(藍)/00-0F ~ F0-FF/</li>
+                <li>color: rgba(255,255,255,1) - 十進制式, R/0-255/ G/0-255/ B/0-255/ A(透明度)/0.0-1.0/</li>
+                <li>color: white - 如果知道顏色的名字可以直接輸入 *不建議*</li>
+                <li>屬性 background 同上</li>
+              </ol>
+            </div>
+            <h3>基本八色</h3>
+            <div class="code">
+              <ol>
+                <li><span style="color:#fff">white</span></li>
+                <li><span style="color:#000">black</span></li>
+                <li><span style="color:#f00">red</span></li>
+                <li><span style="color:#0f0">green</span></li>
+                <li><span style="color:#00f">blue</span></li>
+                <li><span style="color:#ff0">yellow</span></li>
+                <li><span style="color:#f0f">magenta</span></li>
+                <li><span style="color:#0ff">cyan</span></li>
+              </ol>
+            </div>
+            <p>對於這個部份，如果有PS就直接查找 十六 或 十 進制會更直接，如果沒有PS，可以上Adobe Color自己尋找配色。</p>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <h2>REFERENCE</h2>
+        <p><a href="http://www.quackit.com/html/codes/" target="_new">http://www.quackit.com/html/codes/</a></p>
+        <p><a href="http://www.w3schools.com/" target="_new">http://www.w3schools.com/</a></p>
+        <p><a href="https://color.adobe.com/" target="_new">https://color.adobe.com/</a></p>
+      </div>
+    </div>
+
+    <footer>
+      <div id="copyright">
+        <div class="box">
+          2016 &copy; KUROSU'S
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

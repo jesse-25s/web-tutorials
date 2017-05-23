@@ -1,0 +1,237 @@
+<!-- You should read this mode better than the design view -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Tutorial Lession 1 :: KUROSU'S</title>
+    <link rel="stylesheet" type="text/css" href="../css/tails-main.css" />
+  </head>
+
+  <body>
+    <header class="header-fixed">
+      <div class="box">
+        KUROSU'S - Web Tutorial
+      </div>
+    </header>
+
+    <div id="wrapper">
+      <div class="box-full">
+        <div class="box">
+          <h1>Lesson 1 :: HTML</h1>
+          <p>網頁英文叫Hyper Text Markup Language，簡稱HTML，是文字檔。BULLSHIT啦！誰要知道這種事？</p>
+          <p>我是Mentor Jesse(自稱)，我不會長篇大論教你寫網頁，我只要用最精簡的方法去迫你學會建立自己的網站。</p>
+          <p>但這個遊戲開始前，先要大家準備以下的東西：
+            <ol>
+              <li>電腦一台 WIN 7/8/10 或者 MAC (如果無，請自掛東南枝)</li>
+              <li>安裝XAMPP v5.6.x 版本 (<a href="https://www.apachefriends.org/zh_tw/index.html" target="_new">Download</a>)</li>
+              <li>下載ATOM (<a href="https://atom.io/">Download</a>) / NOTEPAD++ (<a href="https://notepad-plus-plus.org/">Download</a>)</li>
+              <li>安裝CHROME / FIREFOX，寫網頁唔講IE</li>
+            </ol>
+          </p>
+          <p>Mentor Jesse主要會以ATOM作講解，不要問Dreamwaver可不可以，可以的，別廢話，你有錢便買個Dreamwaver來用吧！</p>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>STEP 0</h2>
+        <h3>安裝XAMPP</h3>
+        <p>最主要是安裝 Apache 及 MYSQL Database，安裝完成後你可以從安裝路徑內找到 X:\xampp\htdocs\，Mentor Jesse強力建議大家將htdocs設成桌面捷徑或標籤為常用，這樣便不用每次煩複進入存放檔案的位置。</p>
+        <p>先不要心急，香港人心急我知道！先從電腦中開啟 XAMPP視窗，並將第一及第二個選項啟動</p>
+        <p><img src="images/xampp.jpg" class="img-responsive" /></p>
+
+        <h3>開啟ATOM</h3>
+        <p>ATOM.EXE下載後可以放到其他位置，它不用安裝，但首次啟動需時，如果你移除ATOM.EXE便不能再開啟程式。</p>
+
+        <h3>安裝NOTEPAD++</h3>
+        <p>NOTEPAD++安裝後可以裝其資料夾整個放入手指或其他地方內，容量細，不佔資源。</p>
+        <p><br/><br/></p>
+
+        <h3>ARE YOU READY?</h3>
+      </div>
+
+      <div class="box">
+        <h2>STEP 1</h2>
+        <h3>建立PROJECT資料夾，引入ATOM</h3>
+        <p>先進入X:\xampp\htdocs\，然後自己定義一個新資料夾的名字，例如 "web"
+          <br/>
+          資料夾的名字不要用任何大階字母、空白鍵及中文字在內，玩死自己無謂啦！
+        </p>
+        <p>
+          從ATOM將建立的資料夾引入<br/>
+          方法一：<br/>
+          MS WINDOW : File > Add Project Folder <br/>
+          MAC : Atom > Add Project Folder
+        </p>
+        <p>
+          方法二：<br/>
+          將資料夾直入拖入ATOM LOL
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>STEP 2</h2>
+        <h3>建立index.html</h3>
+        <p>從ATOM左邊的樹表中，指著資料夾Right Click滑鼠，點擊 "New File"並輸入 "index.html"<br/>
+          <img src="images/new-file.jpg" class="img-responsive" />
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>STEP 3</h2>
+        <h3>HTML的基本編碼</h3>
+        <p>首先你要知道HTML的基本構成式才能寫下去：</p>
+        <div class="code">
+          <ol>
+            <li><span class="tag">&lt;!DOCTYPE html&gt;</span></li>
+            <li><span class="tag">&lt;html&gt;</span></li>
+            <li>&nbsp;&nbsp;<span class="tag">&lt;head&gt;</span></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;meta charset="UTF-8" /&gt;</span></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;title&gt;</span>KUROSU'S Web Tutorial<span class="tag">&lt;/title&gt;</span></li>
+
+            <li>&nbsp;&nbsp;<span class="tag">&lt;/head&gt;</span></li>
+            <li>&nbsp;&nbsp;<span class="tag">&lt;body&gt;</span></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;h1&gt;</span>Hello HTML!<span class="tag">&lt;/h1&gt;</span></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;p&gt;</span>I am learning the HTML now!<span class="tag">&lt;/p&gt;</span></li>
+            <li>&nbsp;&nbsp;<span class="tag">&lt;/body&gt;</span></li>
+            <li><span class="tag">&lt;/html&gt;</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>STEP 4</h2>
+        <h3>檢視你寫的東西</h3>
+        <p>開啟 CHROME 或 FIREFOX，在網址列內輸入 localhost/web/index.html</p>
+        <p>之後你看見甚麼?</p>
+      </div>
+
+      <div class="box-full">
+        <div class="box">
+          <h2>&lt;tag&gt;</h2>
+          <p>HTML是由一堆 tag 組成，每一個 tag 都有各自的意思，同時它們都有自己的表達方法。</p>
+          <div class="code">
+            <ol>
+              <li>&lt;h1&gt;&lt;/h1&gt;</li>
+              <li>&lt;p&gt;&lt;/p&gt;</li>
+              <li>&lt;div&gt;&lt;/div&gt;</li>
+              <li>&lt;ul&gt;&lt;/ul&gt;</li>
+              <li>&lt;ol&gt;&lt;/ol&gt;</li>
+              <li>&lt;li&gt;&lt;/li&gt;</li>
+              <li>&lt;header&gt;&lt;/header&gt;</li>
+              <li>&lt;footer&gt;&lt;/footer&gt;</li>
+              <li>&lt;section&gt;&lt;/section&gt;</li>
+              <li>&lt;nav&gt;&lt;/nav&gt;</li>
+              <li>&lt;img src=”” /&gt;</li>
+              <li>&lt;hr/&gt;</li>
+              <li>&lt;br/&gt;</li>
+              <li>&lt;input /&gt;</li>
+              <li>&lt;meta /&gt;</li>
+            </ol>
+          </div>
+
+          <p>找到它們的差別嗎?大部份的 tag 都是以一組包著內容，但也有些 tag 只要一個便能在HTML表達出來。</p>
+          <p>現在我們來解釋以上的 tag 的用途：</p>
+          <div class="code">
+            <ol>
+              <li><span class="tag">&lt;h1&gt;&lt;/h1&gt;</span> - heading(標題)，大至小由h1至h6。</li>
+              <li><span class="tag">&lt;p&gt;&lt;/p&gt;</span> - paragraph(段落)，包著文字或圖片。</li>
+              <li><span class="tag">&lt;div&gt;&lt;/div&gt;</span> - division(分區)，多數用來分隔HTML各部份及CSS附加效果。</li>
+              <li><span class="tag">&lt;ul&gt;&lt;/ul&gt;</span> - unordered list(不排序清單)，文字前會列出圓點。</li>
+              <li><span class="tag">&lt;ol&gt;&lt;/ol&gt;</span> - ordered list(排序清單)，文字前會列出 1,2,3,4...。</li>
+              <li><span class="tag">&lt;li&gt;&lt;/li&gt;</span> - list(清單)，於 &lt;ul&gt; 及 &lt;ol&gt; 內使用。</li>
+              <li><span class="tag">&lt;header&gt;&lt;/header&gt;</span> - (頁首)，HTML5新增 &lt;tag&gt;，區分網頁結構會更清晰及方便設定CSS。</li>
+              <li><span class="tag">&lt;footer&gt;&lt;/footer&gt;</span> - (頁尾)，功用同上</li>
+              <li><span class="tag">&lt;section&gt;&lt;/section&gt;</span> - section(部分) 跟 &lt;div&gt; 相似。</li>
+              <li><span class="tag">&lt;nav&gt;&lt;/nav&gt;</span> - navigation(導覽)，可用作網站MENU及網頁位置識別。</li>
+              <li><span class="tag">&lt;img src=”” /&gt;</span> - image(圖片)，"src"是attribute(屬性)的一種，不同的 &lt;tag&gt;有不同的attribute配合使用，"src"在這裡是存取圖片的位置。</li>
+              <li><span class="tag">&lt;hr/&gt;</span> - horizontal reference(水平線)，分隔文字段落用。</li>
+              <li><span class="tag">&lt;br/&gt;</span> - line break(下一行)，與段落不同，&lt;br/&gt; 用於文字與文字或圖片之間，同一段但不同行，例如歌詞。</li>
+              <li><span class="tag">&lt;input /&gt;</span> - (輸入)，於 &lt;form&gt; 表格內使用的元素。</li>
+              <li><span class="tag">&lt;meta /&gt;</span> - 屬性提供網頁標頭，於 &lt;head&gt; 內使用，設定於search enginee更容易辨識及讀取其內容。</li>
+            </ol>
+          </div>
+
+          <h3>&lt;p&gt; &amp; &lt;br/&gt;</h3>
+          <p>歌詞是一個很好的例子：</p>
+          <div class="code">
+            <ol>
+              <li><span class="tag">&lt;p&gt;</span></li>
+              <li>Nobody knows who I really am<span class="tag">&lt;br/&gt;</span></li>
+              <li>I never felt this empty before<span class="tag">&lt;br/&gt;</span></li>
+              <li>And if I ever need someone to come along<span class="tag">&lt;br/&gt;</span></li>
+              <li>Who's gonna comfort me, and keep me strong</li>
+              <li><span class="tag">&lt;/p&gt;</span></li>
+              <li><span class="tag">&lt;p&gt;</span></li>
+              <li>We are all rowing the boat of fate<span class="tag">&lt;br/&gt;</span></li>
+              <li>The waves keep on coming and we can't escape<span class="tag">&lt;br/&gt;</span></li>
+              <li>But if we ever get lost on our way<span class="tag">&lt;br/&gt;</span></li>
+              <li>The waves would guide you through another day</li>
+              <li><span class="tag">&lt;/p&gt;</span></li>
+            </ol>
+          </div>
+
+          <div class="result">
+            <p>顯示結果：</p>
+            <p>
+              Nobody knows who I really am<br/>
+              I never felt this empty before<br/>
+              And if I ever need someone to come along<br/>
+              Who's gonna comfort me, and keep me strong
+            </p>
+            <p>
+              We are all rowing the boat of fate<br/>
+              The waves keep on coming and we can't escape<br/>
+              But if we ever get lost on our way<br/>
+              The waves would guide you through another day
+            </p>
+          </div>
+
+          <h3>&lt;img /&gt;</h3>
+          <p>放入圖片也是很基本要學會的一環，以下是存取別人家網站內圖片的例子：</p>
+          <div class="code">
+            <ol>
+              <li>&lt;img src=”<span class="tag">http://i2.wp.com/aramajapan.com/wp-content/uploads/2016/06/aramajapan_kiminonawa-promo-e1464931569970.jpg?fit=639%2C659</span>” /&gt;</li>
+            </ol>
+          </div>
+
+          <p>以下是存取自己Project內的images：</p>
+          <div class="code">
+            <ol>
+              <li>&lt;img src=”<span class="tag">images/kimi-no-namae-ha.jpg</span>” /&gt;</li>
+            </ol>
+          </div>
+          <div class="result">
+            <p>顯示結果：</p>
+            <p><img src="images/kimi-no-namae-ha.jpg" alt="" title="" class="img-responsive" /></p>
+          </div>
+
+          <h3>TIPS: 從第一天便要養成的良好習慣</h3>
+          <div class="code">
+            <ol>
+              <li><span>/web/</span> - Project資料夾</li>
+              <li>├ <span class="tag">/images/</span> - 放置圖片的資料夾</li>
+              <li>├ <span class="class">/css/</span> - 放置CSS的資料夾</li>
+              <li>├ <span class="id">/js/</span> - 放置JS的資料夾</li>
+              <li>└ index.html</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box">
+        <h2>REFERENCE</h2>
+        <p><a href="http://www.quackit.com/html/codes/">http://www.quackit.com/html/codes/</a></p>
+        <p><a href="http://www.w3schools.com/">http://www.w3schools.com/</a></p>
+      </div>
+    </div>
+
+    <footer>
+      <div id="copyright">
+        <div class="box">
+          2016 &copy; KUROSU'S
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

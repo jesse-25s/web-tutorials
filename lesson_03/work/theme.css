@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: #c013cc;
+}
+
+/* Class */
+.text-red {
+  color: #ff0000;
+}
+
+th {
+  text-align: left;
+}
+
+
+/* ID */
+#table h1 {
+  color: #aaff00;
+}
+
+#table > .text-yellow {
+  color: #ffff00;
+}
+
+#table > h1.text-yellow {
+  color: #ffff00;
+}
+
+.list-example li {
+  line-height: 2.5;
+
+  border-top: 1px solid #fff;
+}
+
+.list-example li + li {
+  border-top: 1px solid #fff;
+}
