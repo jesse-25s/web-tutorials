@@ -1,0 +1,141 @@
+<!-- You should read this mode better than the design view -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web Tutorial Lession 3 :: KUROSU'S</title>
+    <link rel="stylesheet" type="text/css" href="../css/tails-main.css" />
+  </head>
+
+  <body>
+    <header class="header-fixed">
+      <div class="box">
+        KUROSU'S - Web Tutorial
+      </div>
+    </header>
+
+    <div id="wrapper">
+      <div class="box-full">
+        <div class="box">
+          <h1>Lesson 3 :: HEADER &amp; FOOTER</h1>
+          <p>HEADER(頁首)、FOOTER(頁尾)，寫一個網頁最基本必然具備的東西，這課會解構網頁的Template(模板)的重要性。</p>
+          <ol>
+            <li>HEADER</li>
+            <li>CONTENT</li>
+            <li>FOOTER</li>
+          </ol>
+          <p>Template的重要性，道理跟建立一個獨立CSS文件一樣，為了減少重覆性動作而大大降低錯誤出現的機率。</p>
+
+        </div>
+      </div>
+      <div class="box">
+        <div>
+          <h2>先重新定制網頁結構</h2>
+          <div class="code">
+            <ol>
+              <li><span>/web/</span> - Project資料夾</li>
+              <li>├&nbsp;┬&nbsp;<strong>/templates/</strong> - 放置所有網頁文件的資料夾</li>
+              <li>│&nbsp;└┬&nbsp;&nbsp;<strong>/common/</strong> - 放置常用網頁文件的資料夾</li>
+              <li>│&nbsp;&nbsp;├─&nbsp;&nbsp;header.php</li>
+              <li>│&nbsp;&nbsp;└─&nbsp;&nbsp;footer.php</li>
+              <li>├ <span class="tag">/images/</span> - 放置圖片的資料夾</li>
+              <li>├ <span class="class">/css/</span> - 放置CSS的資料夾</li>
+              <li>├ <span class="id">/js/</span> - 放置JS的資料夾</li>
+              <li>└ index.php</li>
+            </ol>
+          </div>
+
+          <h2>HEADER</h2>
+          <div class="code">
+            <ol>
+              <li>&lt;!DOCTYPE html&gt;</li>
+              <li>&lt;html&gt;</li>
+              <li>&nbsp;&nbsp;&lt;head&gt;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="utf-8" /&gt;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Web Title&lt;/title&gt;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;</li>
+              <li>&nbsp;&nbsp;&lt;/head&gt;</li>
+              <li>&nbsp;&nbsp;&lt;body&gt;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;header&gt;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Header Content</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/header&gt;</li>
+            </ol>
+          </div>
+          <p>先獨立開啟一個叫<strong>header.php</strong>的文件，這部份只會將HTML至BODY以及HEADER的TAG存放在<strong>HEADER.PHP</strong>內。</p>
+        </div>
+
+        <div>
+          <h2>CONTENT</h2>
+          <div class="code">
+            <ol>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;Body Content</li>
+            </ol>
+          </div>
+          <p>每頁的內容側存放在這裡，而接著下來便是建立<strong>FOOTER.PHP</strong>，後面就是寫PHP格式的文件導入編碼。</p>
+        </div>
+
+        <div>
+          <h2>FOOTER</h2>
+          <div class="code">
+            <ol>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&gt;</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Footer Content</li>
+              <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;</li>
+              <li>&nbsp;&nbsp;&lt;/body&gt;</li>
+              <li>&lt;/html&gt;</li>
+            </ol>
+          </div>
+          <p>再獨立開啟一個叫<strong>footer.php</strong>的文件，這部份只會將FOOTER至HTML的TAG存放在<strong>FOOTER.PHP</strong>內。</p>
+        </div>
+
+      </div>
+      <div class="box-full">
+        <div class="box">
+          <h2>學一點PHP</h2>
+          <div class="block">
+            <h3>為何不是HTML?</h3>
+            <p>因為單純的HTML是不能以Template導入寫網頁的，如果夾雜了其他language就可以輕鬆寫網頁。所以第一次教要安裝XAMPP就是為了這個目的。</p>
+            <p>以下是PHP的基本寫法：</p>
+            <div class="code">
+              <ol>
+                <li>&lt;?php <span class="tag">{code}</span> ?&gt;</li>
+              </ol>
+            </div>
+
+            <p>PHP導入網頁的方法：</p>
+            <div class="code">
+              <ol>
+                <li>&lt;?php <span class="tag">include ('{path/file}');</span> ?&gt;</li>
+                <li>&lt;?php <span class="tag">include_once ('{path/file}');</span> ?&gt;</li>
+                <li>&lt;?php <span class="tag">require ('{path/file}');</span> ?&gt;</li>
+                <li>&lt;?php <span class="tag">require_once ('{path/file}');</span> ?&gt;</li>
+              </ol>
+            </div>
+            <h3>講乜鳩?</h3>
+            <p>
+              include()：這個函式容許你在腳本中把同一個檔案插入多次，若果檔案不存在，它會發出系統警告並繼續執行腳本。</br>
+              include_once()：它跟 include() 的功能相似，正如它的名字所示，在腳本的執行期間，有關檔案只會被插入一次。</br>
+              require()：跟 include() 差不多，它也是用來在腳本中插入其他檔案，但若果檔案不存在，它會發出系統警告，這個警告會引致致命錯誤令腳本中止執行。
+            </p>
+            <p>
+              <strong>{path/file}</strong> 在CSS導入式的部份已經教過，同一樣的道理，就是應用左在同的位置。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>REFERENCE</h2>
+        <p><a href="http://www.w3schools.com/php/php_includes.asp" target="_new">http://www.w3schools.com/php/php_includes.asp</a></p>
+      </div>
+    </div>
+
+    <footer>
+      <div id="copyright">
+        <div class="box">
+          2017 &copy; KUROSU'S
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
